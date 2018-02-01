@@ -3,142 +3,27 @@
 
 //General
 .contentWrapper {
-  background-color: #ffffff;
+  background-color: #f4f4f4;
+}
+img {
+  max-width: 100%;
 }
 
 //Header
 header {
   overflow: hidden;
-  background-color: #ffffff;
-  padding: 0 0 20px 0;
-  .top-bar {
-    background: #e6e6e6;
-    margin: 0;
-    width: 100%;
-    margin: 0 0 20px 0;
-    ul {
-      padding: 0;
-      li {
-        display: inline;
-        padding: 0 10px;
-      }
-    }
-  }
-  h1 {
-    margin-top: 10px;
-    font-size: 30px;
-  }
-  span {
-    font-size: 40px;
-  }
-  .social {
-    .networks{
-      width: 30%;
-    }
-    .city-photo {
-      position: absolute;
-      top: -20px;
-      right: 0;
-    }
-  }
+  background-color: #134384;
+  padding: 10px 0;
 }
 
-//Navbar
-nav {
-  background-color: #707274;
-  ul {
-    padding: 0;
-    li {
-      display: inline;
-      padding: 0 15px;
-      a {
-        color: #ffffff;
-      }
-    }
-  }
-  .active {
-    text-decoration: underline;
-  }
-}
+//Hotel detail
 
-//Footer
-footer {
-  background-color: #242122;
-  height: 200px;
-  padding: 60px 0 10px 0;
-  p {
-    color: #ffffff;
-    font-size: 15px;
-  }
-  h3,
-  span {
-    color: #939393;
-  }
-  img {
-    max-width: 100%;
-  }
-}
-
-//Image carousel
-.imageCarousel {
-  background-color: #e6e6e6;
-  padding: 15px;
-  max-width: 97%;
-  margin-bottom: 30px;
-}
-
-//Slider
-.slider {
-  margin: 30px 0;
-  .col-9,
-  .col-3 {
-    margin: 0;
-  }
-  .col-9 {
-    margin-right: 4%;
-  }
-}
-
-//Gallery
-.image-gallery {
-  width: 80%;
-  margin: 0 auto;
-  background-color: black;
-  margin-bottom: 30px;
-}
-.gallery {
-  margin-bottom: 30px;
-  h2 {
-    margin: 20px 0;
-  }
-  h4 {
-    margin: 20px 0;
-  }
-}
-
-//News
-.news {
-  margin-bottom: 70px;
-  h2 {
-    margin: 20px 0 0 0;
-  }
-  .news-list {
-    width: 104%;
-    left: -2%;
-    position: relative;
-    margin-bottom: 30px;
-    .news-item {
-      margin-top: 30px;
-      margin-bottom: 20px;
-      img {
-        max-width: 100%;
-      }
-      p {
-        margin-top: 10px;
-        font-size: 15px;
-        line-height: 15px;
-        font-weight: 500;
-      }
-    }
+.hotel-detail{
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 10px 0;
+  .star{
+    width: 30px;
+    fill: yellow;
   }
 }

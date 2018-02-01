@@ -1,13 +1,17 @@
 import React, { Component } from "react";
-import ImageCarousel from "../../components/image-carousel/image-carousel";
-import Slider from "../../components/slider/slider";
+import Filter from "../../components/filter/filter";
+import HotelList from "../../components/hotel/hotel-list";
 
 class Home extends Component {
   render() {
     return (
-      <div className="col-12">
-        <Slider />
-        <ImageCarousel />
+      <div className="row">
+        <div className="col-3">
+          <Filter />
+        </div>
+        <div className="col-9">
+          <HotelList />
+        </div>
       </div>
     );
   }
