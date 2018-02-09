@@ -7,8 +7,7 @@
   "author": "Jonathan Buitrago Lopez",
   "license": "MIT",
   "scripts": {
-    "serve": "nodemon ./api/app.js",
-    "start": "webpack-dev-server"
+    "start": "nodemon ./api/app.js | webpack-dev-server"
   },
   "dependencies": {
     "axios": "^0.17.1",
