@@ -5,24 +5,28 @@ class Filter extends Component {
     super(props);
     this.state = {
       searchTerm: "",
-      stars: null
+      stars: []
     };
     this.setStarFilter = this.setStarFilter.bind(this);
     this.setSearchFilter = this.setSearchFilter.bind(this);
   }
 
   setStarFilter(e) {
+    const elementIndex = this.state.stars.indexOf(e.target.value);
     this.setState({
-      stars: e.target.value
+      stars: elementIndex === -1 ? [...this.state.stars, e.target.value] : [...this.state.stars.slice(0, elementIndex),
+      ...this.state.stars.slice(elementIndex + 1, this.state.stars.length)]
+    }, () => {
+      this.props.filterData({ term: this.state.searchTerm, stars: this.state.stars })
     })
-    this.props.filterData({ stars: e.target.value })
   }
 
   setSearchFilter(e) {
     this.setState({
       searchTerm: e.target.value
+    }, () => {
+      this.props.filterData({ term: this.state.searchTerm, stars: this.state.stars })
     })
-    this.props.filterData({ term: e.target.value })
   }
 
   starsRender(starsNumber) {
@@ -56,7 +60,6 @@ class Filter extends Component {
             Estrellas
           </h2>
           <div>
-            <input type="checkbox" name="stars[]" value={0} defaultChecked /> Todas las estrellas <br />
             {this.starsRender(5)}
             {this.starsRender(4)}
             {this.starsRender(3)}
